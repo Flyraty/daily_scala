@@ -1,8 +1,4 @@
-/*
- * 序列提取器, 简单来说就是将对象中的所需要的内容提取出来
- */
-
-package ScalaGuideBook
+package jikewiki
 
 object SeqExtractor {
 

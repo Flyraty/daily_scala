@@ -1,8 +1,4 @@
-/*
- * 模式在scala中的使用
- */
-
-package ScalaGuideBook
+package jikewiki
 
 object Pattern {
 

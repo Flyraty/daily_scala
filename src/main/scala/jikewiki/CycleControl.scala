@@ -1,51 +1,56 @@
 /*
- * 循环控制，在循环中使用过滤，嵌套循环，生层器
+ * scala 中是如何处理和替代 break, continue 循环控制,
+ * emnn, 用递归
+ * breakable
  */
 package jikewiki
 
-import java.io.File
+import java.io._
+import scala.util.control.Breaks._
+
 
 object CycleControl {
+
   def main(args: Array[String]): Unit = {
-    val filesHere = new File(".").listFiles()
 
-    simpleCycle(filesHere)
-    filterCycle(filesHere)
-    nestCycle(filesHere)
-    println(createNewSetByCycle(filesHere))
-  }
+    val files = new File(".").listFiles()
 
-  def simpleCycle(filesHere: Array[File]) = {
-    for (file <- filesHere){
-      println(file)
+    findFile(files)
+    println(files(findFileRecursive(0)))
+    useBreakable()
+
+
+    def findFileRecursive(i:Int): Int = {
+      if (i >= files.length) -1
+      else if (files(i).getName.startsWith("./.g")) findFileRecursive(i)
+      else if (files(i).getName.endsWith(".sbt")) i
+      else findFileRecursive(i+1)
     }
 
-    filesHere.foreach(println)
+    def findFile(files: Array[File]) = {
+      var i = 0
+      var foundIt = false
+      while (i<files.length && !foundIt) {
+        if (!files(i).getName.startsWith("./.g")) {
+          if (files(i).getName.endsWith(".sbt")) {
+            foundIt = true
+            println(files(i).getName)
+          }
+        }
+        i += 1
+      }
+    }
+
+    def useBreakable() = {
+      val in = new BufferedReader(new InputStreamReader(System.in))
+      breakable {
+        while(true) {
+          println("? ")
+          if(in.readLine()=="") break
+        }
+      }
+    }
   }
 
-  def filterCycle(filesHere: Array[File]) = {
-    for (file <- filesHere
-      if file.isFile
-      if file.getName.endsWith(".sbt")
-    ) println(file)
-  }
-
-  def fileLines(file: java.io.File) = {
-    scala.io.Source.fromFile(file).getLines().toList
-  }
-
-  def nestCycle(filesHere: Array[File]) = {
-    for {
-      file <- filesHere    if file.getName.endsWith(".sbt")
-      line <- fileLines(file)
-    } println(file + ":" + line.trim)
-  }
-
-  def createNewSetByCycle(filesHere: Array[File]) = {
-    for (
-      file <- filesHere
-      if file.getName.endsWith(".sbt")
-    ) yield file
-  }
 
 }

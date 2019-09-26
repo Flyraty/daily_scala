@@ -1,7 +1,4 @@
-/*
- * Either[A,B], 顾名思义, 返回A或者B。有2个子类型left, right, left一般表示错误
- */
-package ScalaGuideBook
+package jikewiki
 
 import java.net.URL
 

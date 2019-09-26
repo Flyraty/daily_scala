@@ -1,7 +1,4 @@
-/*
- * scala 中处理错误的方式 Try类型+模式匹配+recover
- */
-package ScalaGuideBook
+package jikewiki
 
 import java.io.{FileNotFoundException, InputStream}
 import java.net.{MalformedURLException, URL}

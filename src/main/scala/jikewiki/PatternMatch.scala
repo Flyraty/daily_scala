@@ -1,8 +1,4 @@
-/*
- * 模式匹配和匿名函数
- */
-
-package ScalaGuideBook
+package jikewiki
 
 object PatternMatch {
 

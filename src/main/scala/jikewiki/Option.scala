@@ -1,8 +1,4 @@
-/*
- * scala中的Option类型, 强制使用, 针对滥用Null可能产生的错误
- */
-
-package ScalaGuideBook
+package jikewiki
 
 object Option {
 
