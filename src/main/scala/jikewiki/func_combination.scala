@@ -4,10 +4,11 @@
  */
 package jikewiki
 
-case class Email(subject: String, text: String, sender: String, recipient: String)
 
 
 object func_combination {
+  case class Email(subject: String, text: String, sender: String, recipient: String)
+
   type EmailFilter = Email => Boolean
 
   def newMailsForUser(mails: Seq[Email], f: EmailFilter) = mails.filter(f)
