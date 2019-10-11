@@ -4,7 +4,7 @@ import java.net.URL
 
 import scala.io.Source
 
-object EitherType {
+object either_type {
 
   def main(args: Array[String]): Unit = {
 

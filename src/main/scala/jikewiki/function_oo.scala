@@ -10,7 +10,7 @@ package jikewiki
 
 import scala.io.Source
 
-class Function {
+class function_oo {
   def processFiles(file:String, width:Int) = {
     val source = Source.fromFile(file)
     for (line <- source.getLines()) {
@@ -58,11 +58,11 @@ class Function {
 
 }
 
-object Function {
+object function_oo {
 
   def main(args: Array[String]): Unit = {
 
-    new Function().test()
+    new function_oo().test()
 
   }
 

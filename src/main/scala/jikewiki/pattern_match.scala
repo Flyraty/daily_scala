@@ -1,6 +1,6 @@
 package jikewiki
 
-object PatternMatch {
+object pattern_match {
 
   def main(args: Array[String]): Unit = {
 

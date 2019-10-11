@@ -1,6 +1,6 @@
 package jikewiki
 
-object SeqExtractor {
+object seq_extractor {
 
   object GivenNames {
     def unapplySeq(name: String): Option[Seq[String]] = {
@@ -42,6 +42,29 @@ object SeqExtractor {
     greetWithFirstName("Di da")
 
     helloWithName("Di da")
+
+
+    val lists = List(1, 2, 3) :: List.empty :: List(5, 3) :: Nil
+    for {
+      list @ head :: _ <- lists
+    } yield list.size
+
+    for (list  <- lists)
+    {
+      list match {
+        case head :: _ => println(list)
+        case _ => println("list empty")
+      }
+    }
+
+    var i = 0
+
+    for {
+      head :: _ <- lists
+    } {
+      i += 1
+    }
+
 
   }
 

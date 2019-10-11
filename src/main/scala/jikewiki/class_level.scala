@@ -5,7 +5,7 @@
  */
 package jikewiki
 
-object ClassLevel {
+object class_level {
 
   def error(message:String) :Nothing =
     throw new RuntimeException(message)

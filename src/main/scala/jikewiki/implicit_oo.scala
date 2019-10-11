@@ -5,7 +5,7 @@
  */
 package jikewiki
 
-class Implicit {
+class implicit_oo {
 
   // implicit 扩展 TCP 鉴权请求
   class AuthParam {}
@@ -82,9 +82,9 @@ class Implicit {
 
 }
 
-object Implicit {
+object implicit_oo {
   def main(args: Array[String]): Unit = {
-    new Implicit().test()
+    new implicit_oo().test()
   }
 }
 

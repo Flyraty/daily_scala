@@ -7,7 +7,7 @@
  * final 修饰的类和方法使得子类不能重写
  *
  */
-package Practice
+package practice
 
 abstract class Element {
   def contents: Array[String]

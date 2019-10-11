@@ -4,7 +4,7 @@
  *   if (x >= 0) super.put(x)
  *  需要注意在中接口中复写 调用抽象类的抽象方法时，需要用 abstract override
  */
-package Practice
+package practice
 
 import scala.collection.mutable.ArrayBuffer
 

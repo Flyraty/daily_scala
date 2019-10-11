@@ -10,7 +10,7 @@
  */
 
 
-package Practice
+package practice
 
 class Rational(n: Int, d: Int) {
   require(d != 0)

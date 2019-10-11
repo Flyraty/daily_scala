@@ -6,7 +6,7 @@ import java.net.{MalformedURLException, URL}
 import scala.io.Source
 import scala.util.{Failure, Success, Try}
 
-object TryType {
+object try_type {
 
   def main(args: Array[String]): Unit = {
 

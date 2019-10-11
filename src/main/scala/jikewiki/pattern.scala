@@ -1,6 +1,6 @@
 package jikewiki
 
-object Pattern {
+object pattern {
 
   case class Player(name: String, score: Int)
 

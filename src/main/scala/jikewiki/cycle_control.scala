@@ -9,7 +9,7 @@ import java.io._
 import scala.util.control.Breaks._
 
 
-object CycleControl {
+object cycle_control {
 
   def main(args: Array[String]): Unit = {
 

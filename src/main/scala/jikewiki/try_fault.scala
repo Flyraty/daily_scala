@@ -6,7 +6,7 @@ package jikewiki
 import java.io.FileReader
 import java.io.FileNotFoundException
 
-class TryFault {
+class try_fault {
 
   def readFile() = {
     try {
@@ -23,10 +23,10 @@ class TryFault {
   def g2():Int = try {return 1} finally {return 2}
 }
 
-object TryFault{
+object try_fault{
   def main(args: Array[String]): Unit = {
 
-    val diuDiu =  new TryFault()
+    val diuDiu =  new try_fault()
     diuDiu.readFile()
 
     // TODO 返回值不一样？

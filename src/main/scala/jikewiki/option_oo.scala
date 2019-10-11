@@ -1,6 +1,6 @@
 package jikewiki
 
-object Option {
+object option_oo {
 
   val greeting: Option[String] = Some("Di da, di da")
 

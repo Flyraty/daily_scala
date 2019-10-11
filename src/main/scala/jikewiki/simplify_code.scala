@@ -6,7 +6,7 @@ package jikewiki
 
 import java.io._
 
-object SimplifyCode {
+object simplify_code {
 
   private def files = new File("./").listFiles()
 

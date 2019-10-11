@@ -1,7 +1,7 @@
 /*
  * scala 实现字符串的全排列
  */
-package Practice
+package practice
 
 object Permutations {
   def permutations(s: String):IndexedSeq[String] = {

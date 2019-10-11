@@ -5,7 +5,7 @@ package jikewiki
 
 import java.io.File
 
-object Cycle {
+object cycle {
   def main(args: Array[String]): Unit = {
     val filesHere = new File(".").listFiles()
 
