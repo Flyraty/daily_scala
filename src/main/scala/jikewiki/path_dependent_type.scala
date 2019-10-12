@@ -13,5 +13,5 @@ object path_dependent_type {
   val b1 = new a1.B
   val b2 = new a2.B
   a1.b = Some(b1)
-  a2.b = Some(b1) //  error, b1类型为a1.b
+//  a2.b = Some(b1) //  error, b1类型为a1.b
 }

@@ -86,7 +86,7 @@ object Element {
 }
 
 
-// TODO 想不出来，有点笨。。。
+// TODO what??
 object Spiral {
   import Element._
   val space = elem (" ")

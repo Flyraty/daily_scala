@@ -13,7 +13,7 @@ object func_curry {
   // 函数部分应用
   val divide =  (num:Double, n:Double) => num / n
 
-  val halfOf = divide(_, 2)
+  val halfOf = divide(_:Double, 2)
 
   type IntPairPred = (Int, Int) => Boolean
 
@@ -32,7 +32,7 @@ object func_curry {
   // 函数柯里化
   val divideCurry: Double => Double => Double = divide.curried  // curried uncurried
 
-  val halfOf2 = divideCurry(_)(2)
+  val halfOf2 = divideCurry(_:Double)(2)
 
   def sizeConstraint(pred: IntPairPred)(n: Int)(email: Email): Boolean =
     pred(email.text.length, n)

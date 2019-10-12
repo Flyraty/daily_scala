@@ -24,7 +24,7 @@ object either_type {
         (a.getLines().size + b.getLines().size) / 2))
     println(s"the average size of baidu and github request page is ${average_size.right.getOrElse(0)}")
 
-    println(averageLineCountWontCompile(baidu, github))
+//    println(averageLineCountWontCompile(baidu, github))
 
     type Citizen = String
     case class BlackListedResource(url: URL, visitors: Set[Citizen])
@@ -51,15 +51,15 @@ object either_type {
   }
 
   // 在for循环中使用Either容易出现的错误 TODO:There have a problem
-  def averageLineCountWontCompile(url1: URL, url2: URL): Either[String, Int] = {
-    for {
-      source1 <- getContent(url1)
-      source2 <- getContent(url2)
-      lines1 = source1.getLines().size
-      lines2 = source2.getLines().size
-
-    } yield (lines1 + lines2) / 2
-  }
+//  def averageLineCountWontCompile(url1: URL, url2: URL): Either[String, Int] = {
+//    for {
+//      source1 <- getContent(url1)
+//      source2 <- getContent(url2)
+//      lines1 = source1.getLines().size
+//      lines2 = source2.getLines().size
+//
+//    } yield (lines1 + lines2) / 2
+//  }
 
 
 }
