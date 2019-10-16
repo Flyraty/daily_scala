@@ -23,10 +23,10 @@
      - [类型类]()
      - [路径依赖类型]()
  - Spark
-     - Session
-     - Dataset DataFrame
-     - Data Source API
-     - Colume
+     - [Session]()
+     - [Dataset DataFrame]()
+     - [Data Source API]()
+     - Column
      - Schema
      - Join
      - Window
@@ -41,14 +41,17 @@
      - 常见算子
      - Checkpointing  Caching
      - Configue
-     
-
-## 小练习
- - [Rational 有理数类]()
- - [Element 二维图形元素类]()
- - [IntQueue 简单的整数队列]()
- - [递归全排列]()
- - more
+ - Doc
+     - TODO
+ - Practice
+     - [Rational 有理数类]()
+     - [Element 二维图形元素类]()
+     - [IntQueue 简单的整数队列]()
+     - [递归全排列]()
+     - more
+ 
+## Notion
+ - spark na.fill 当接收Map作为参数时，Map的value类型只能为Int, Long, Float, Double, String, Boolean.
 
 ## 资料
  - [极客学院](http://wiki.jikexueyuan.com/list/scala/)
@@ -75,8 +78,10 @@
  - [Avro](https://blog.kazaff.me/2014/07/07/是什么系列之Avro/)
  - [SQL优化器原理——查询优化器综述](https://zhuanlan.zhihu.com/p/40478975)
  - [深入理解spark之架构与原理](https://juejin.im/post/5a73c8386fb9a0635e3cafaa)
- - [https://www.jianshu.com/p/47db8ac001ea](https://www.jianshu.com/p/47db8ac001ea)
+ - [你真的了解Join吗？](https://www.jianshu.com/p/47db8ac001ea)
  - [Scala 隐式转换implicit详解](https://tryanswer.github.io/2018/05/24/scala-implicit/)
+ - [扩展Spark Catalyst，打造自定义的Spark SQL引擎](https://zhuanlan.zhihu.com/p/50493032)
+ - [scala 下划线解析报错： missing parameter type for expanded function](https://www.iteye.com/blog/zhouchaofei2010-2260107)
  
 ## Spark Learning
  - [Spark](https://github.com/apache/spark)

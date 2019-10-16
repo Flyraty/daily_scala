@@ -1,4 +1,4 @@
-name := "ScalaLearn"
+name := "daily_scala"
 
 version := "0.1"
 
@@ -11,4 +11,8 @@ libraryDependencies ++= Seq(
   ,"org.scalatest" %% "scalatest" % "2.2.6" % "test"
   ,"org.apache.spark" %% "spark-core" % "2.4.0"
   ,"org.apache.spark" %% "spark-sql" % "2.4.0"
+  ,"org.mongodb.spark" %% "mongo-spark-connector" % "2.4.0"
+  ,"org.apache.spark" %% "spark-sql-kafka-0-10" % "2.4.0"
+  ,"org.apache.spark" %% "spark-avro" % "2.4.0"
+  ,"org.apache.spark" %% "spark-hive" % "2.4.0"
 )
