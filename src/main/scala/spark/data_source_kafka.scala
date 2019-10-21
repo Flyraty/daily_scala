@@ -6,6 +6,7 @@
  * TODO:有点多，还是要先了解下kafka
  */
 package spark
+
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types.StructType
 

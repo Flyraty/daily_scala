@@ -3,7 +3,7 @@
  */
 
 
-package jikewiki
+package scala
 
 trait User {
   def name: String

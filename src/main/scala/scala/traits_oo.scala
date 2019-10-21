@@ -4,7 +4,7 @@
  * 用trait 和用继承 ？
  * Ordered Trait 对象排序接口
  */
-package jikewiki
+package scala
 
 trait Plant {
   def color() = println("I am green")

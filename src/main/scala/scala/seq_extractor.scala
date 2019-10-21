@@ -1,4 +1,4 @@
-package jikewiki
+package scala
 
 object seq_extractor {
 

@@ -1,7 +1,7 @@
 /*
  * 简单的容错处理， try catch, throw, finally
  */
-package jikewiki
+package scala
 
 import java.io.FileReader
 import java.io.FileNotFoundException

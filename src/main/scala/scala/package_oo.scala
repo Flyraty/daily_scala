@@ -5,7 +5,7 @@
  * 包对象 eg:package object
  * TODO:访问控制
  */
-package jikewiki
+package scala
 
 class PPackage {
 

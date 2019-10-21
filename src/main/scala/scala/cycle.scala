@@ -1,7 +1,7 @@
 /*
  * 循环控制，在循环中使用过滤，嵌套循环，生层器
  */
-package jikewiki
+package scala
 
 import java.io.File
 

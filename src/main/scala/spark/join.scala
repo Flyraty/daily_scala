@@ -1,5 +1,0 @@
-package spark
-
-class join {
-
-}

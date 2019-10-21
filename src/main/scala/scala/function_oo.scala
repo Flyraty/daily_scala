@@ -6,7 +6,7 @@
  * 函数参数: 可变参数，命名参数，缺省参数
  * 尾递归优化
  */
-package jikewiki
+package scala
 
 import scala.io.Source
 

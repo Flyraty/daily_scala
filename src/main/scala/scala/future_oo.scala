@@ -2,7 +2,7 @@
  * Scala 中的并发处理， Future 与 Promise,
  * TODO: Future 与组合器结合使用
  */
-package jikewiki
+package scala
 
 import scala.util.{Success, Failure}
 import scala.concurrent.future

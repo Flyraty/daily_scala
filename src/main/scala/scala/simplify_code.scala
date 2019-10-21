@@ -2,7 +2,7 @@
  * FP 风格来简化代码
  * 传名参数的意义，非传名参数会先计算结果
  */
-package jikewiki
+package scala
 
 import java.io._
 

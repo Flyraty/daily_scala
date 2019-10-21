@@ -3,7 +3,7 @@
  * 隐式转换在代码重构中的作用，无须更改现有接口代码
  * 隐式转换类型，隐式视图，隐式类
  */
-package jikewiki
+package scala
 
 class implicit_oo {
 

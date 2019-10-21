@@ -26,8 +26,10 @@
      - [Session]()
      - [Dataset DataFrame]()
      - [Data Source API]()
+     - [Row]()
      - Column
      - Schema
+     - [Transformations, Actions](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-dataset-operators.html)
      - Join
      - Window
      - Pivot
@@ -50,8 +52,10 @@
      - [递归全排列]()
      - more
  
-## Notion
+## Notice
  - spark na.fill 当接收Map作为参数时，Map的value类型只能为Int, Long, Float, Double, String, Boolean.
+ - [Unable to find encoder for type stored in a Dataset. Primitive types (Int, String, etc) and Product types (case classes) are supported by importing spark.implicits._ Support for serializing other types will be added in future releases.](https://forums.databricks.com/questions/13772/apache-spark-210-question-in-spark-sql.html)
+ - case class 使用时遇到的问题，放在方法作用域外面，否则容易出现奇奇怪怪的错误
 
 ## 资料
  - [极客学院](http://wiki.jikexueyuan.com/list/scala/)

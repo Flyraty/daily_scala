@@ -2,7 +2,7 @@
  * 一些常见的函数组合子, 利用现有函数生成新的函数
  * type 设置类型别名，有时候这样写代码更有意义
  */
-package jikewiki
+package scala
 
 
 

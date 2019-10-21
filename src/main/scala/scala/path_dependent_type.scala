@@ -1,7 +1,7 @@
 /*
  * 路径依赖类型，场景: 在编译期检查来自不同类型的操作是否合理
  */
-package jikewiki
+package scala
 
 object path_dependent_type {
   class A {

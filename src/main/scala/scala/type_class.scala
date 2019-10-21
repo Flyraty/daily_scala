@@ -2,7 +2,7 @@
  * 类型类, 建立一个trait, 在其伴生对象中定义隐式实现
  * TODO: 有些小迷离
  */
-package jikewiki
+package scala
 
 object type_class {
 

@@ -1,4 +1,4 @@
-package jikewiki
+package scala
 
 import java.net.URL
 

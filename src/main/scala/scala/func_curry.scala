@@ -4,7 +4,7 @@
  * 在函数式编程语言中，调用函数的过程也叫做将函数应用(applying)到参数。当调用时传入了所有的参数，就叫做将函数完全应用(fully applied)到了所有参数。如果在调用时只传入了部分参数，返回的结果就是一个部分应用函数(Partially Applied Function)
  * 将一个接受多个参数的函数分解成一系列的函数，每个函数只接受一个参数，这个过程叫做柯里化。
  */
-package jikewiki
+package scala
 
 import func_combination.{Email, EmailFilter, mails}
 

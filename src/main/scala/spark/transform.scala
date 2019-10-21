@@ -10,8 +10,8 @@ object transform {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession.builder().master("local")
       .config("spark.ui.port", "14040").getOrCreate()
-    import spark.implicits._
     import org.apache.spark.sql.functions._
+    import spark.implicits._
     val colNames = Seq("vendor", "20190101", "20190102", "20190103", "20190104",
       "20190105", "20190106", "20190107", "20190108", "20190109")
     var ds = Seq(

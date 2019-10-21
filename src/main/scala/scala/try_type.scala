@@ -1,4 +1,4 @@
-package jikewiki
+package scala
 
 import java.io.{FileNotFoundException, InputStream}
 import java.net.{MalformedURLException, URL}

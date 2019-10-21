@@ -8,15 +8,20 @@
  * type DataFrame = Dataset[Row]
  * It is only with Datasets to have syntax and analysis checks at compile time
  * Spark SQL introduces a tabular functional data abstraction called DataFrame.
+ * What are DataSet and DataFrame?
+ * How to create that?
+ * How to operate that?
  */
 package spark
+
 import org.apache.spark.sql.SparkSession
 
 object dataset {
   val spark = SparkSession.builder.master("local[*]").getOrCreate()
+
   import spark.implicits._
 
-  case class Person(name:String, age:Int)
+  case class Person(name: String, age: Int)
 
   def CreateDFUseSchemaAndRows() = {
     /*
@@ -26,15 +31,14 @@ object dataset {
     val headers = lines.first
     val noheaders = lines.filter(_ != headers)
 
-    import org.apache.spark.sql.types.{StructField, StringType, StructType}
+    import org.apache.spark.sql.types.{StringType, StructField, StructType}
 
-    val fs = headers.split("|").map(f => StructField(f, StringType))
+    val fs = headers.split("[|]").map(f => StructField(f, StringType))
     val schema = StructType(fs)
-
 
     import org.apache.spark.sql.Row
 
-    val rows = noheaders.map(_.split("|")).map(a => Row.fromSeq(a))
+    val rows = noheaders.rdd.map(_.split("[|]")).map(a => Row.fromSeq(a))
     val people = spark.createDataFrame(rows, schema)
     people.show()
 
@@ -43,7 +47,7 @@ object dataset {
   def main(args: Array[String]): Unit = {
     spark.range(1).filter($"id" === 0).explain(true)
 
-    spark.range(1).filter(_ == 0).explain(true)  // 和上面的执行计划有啥区别？？
+    spark.range(1).filter(_ == 0).explain(true) // 和上面的执行计划有啥区别？？
 
     val df = Seq("I am a DataFrame").toDF("text")
     df.show()

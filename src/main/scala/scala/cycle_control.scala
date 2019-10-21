@@ -3,7 +3,7 @@
  * emnn, 用递归
  * breakable
  */
-package jikewiki
+package scala
 
 import java.io._
 import scala.util.control.Breaks._
