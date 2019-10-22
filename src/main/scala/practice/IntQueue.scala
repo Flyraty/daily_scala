@@ -1,4 +1,4 @@
-/*
+/**
  * 使用trait来实现一个整数队列
  * get some error: Error:(30, 23) method put in class IntQueue is accessed from super. It may not be abstract unless it is overridden by a member declared `abstract' and `override'
  *   if (x >= 0) super.put(x)

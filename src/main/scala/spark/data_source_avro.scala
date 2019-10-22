@@ -1,4 +1,4 @@
-/*
+/**
  * 读取avro 格式的文件
  * AvroDataSourceOption  读取的json schema, 压缩方式, 扩展,
  */

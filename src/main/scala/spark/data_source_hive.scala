@@ -1,4 +1,4 @@
-/*
+/**
  * spark 读取hive
  */
 package spark

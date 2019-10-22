@@ -1,4 +1,4 @@
-/*
+/**
  * 简单的容错处理， try catch, throw, finally
  */
 package scala

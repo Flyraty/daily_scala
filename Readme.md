@@ -2,60 +2,63 @@
 
 ## 目录
  - Scala
-     - [循环控制]()
-     - [类层次关系]()
+     - [循环控制](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/cycle_control.scala)
+     - [类层次关系](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/class_level.scala)
      - [类和对象 继承]()
-     - [接口Trait]()
-     - [访问控制]()
-     - [函数]()
-     - [容错处理 Try Type]()
+     - [接口Trait](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/traits_oo.scala)
+     - [访问控制](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/function_oo.scala)
+     - [函数](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/function_oo.scala)
+     - [容错处理 Try Type](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/try_type.scala)
      - [包层次关系]()
-     - [提取器]()
-     - [序列提取器]()
-     - [模式及模式匹配]()
-     - [Option]()
-     - [Either]()
-     - [隐式转换]()
-     - [并行处理之Future Promise]()
-     - [简化代码]()
-     - [一些函数组合子]()
-     - [柯里化和部分函数应用]()
-     - [类型类]()
-     - [路径依赖类型]()
+     - [提取器](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/extractor.scala)
+     - [序列提取器](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/seq_extractor.scala)
+     - [模式及模式匹配](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/pattern_match.scala)
+     - [Option](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/option_oo.scala)
+     - [Either](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/either_type.scala)
+     - [隐式转换](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/implicit_oo.scala)
+     - [并行处理之Future Promise](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/future_oo.scala)
+     - [简化代码](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/simplify_code.scala)
+     - [一些函数组合子](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/func_combination.scala)
+     - [柯里化和部分函数应用](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/func_curry.scala)
+     - [类型类](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/type_class.scala)
+     - [路径依赖类型](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/path_dependent_type.scala)
  - Spark
-     - [Session]()
-     - [Dataset DataFrame]()
-     - [Data Source API]()
-     - [Row]()
-     - Column
-     - Schema
-     - [Transformations, Actions](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-dataset-operators.html)
-     - Join
-     - Window
+     - [Session](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/session.scala)
+     - [Dataset DataFrame](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/dataset.scala)
+     - [Data Source API](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/data_source_txt.scala)
+     - [Row](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/row.scala)
+     - [Column](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/column.scala)
+     - [Schema](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/schema.scala)
+     - [Typed Transformations](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/typed_transformations.scala)
+     - [Untyped Transformations](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/untyped_transformations.scala)
+     - [Actions](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/actions.scala)
+     - [DataFrameNaFunctions](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/na_func.scala)
+     - [DataFrameStatFunctions](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/stat_func.scala)
+     - [Basic Aggregate](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/basic_aggregate.scala)
+     - [transform 高阶函数](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/transform.scala)
+     - [Window Aggregate](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/window_aggregate.scala)
+     - Build-In Function
      - Pivot
-     - Aggregate
-     - cube/rollup/grouping_set
+     - cube/rollup/groupings_set
      - UDF
      - UDAF
-     - Build-In Function
      - Execute Plan
-     - transform 高阶函数
-     - 常见算子
-     - Checkpointing  Caching
-     - Configue
- - Doc
-     - TODO
+     - CheckPoint Cache Persist
+     - Configure
  - Practice
      - [Rational 有理数类]()
      - [Element 二维图形元素类]()
      - [IntQueue 简单的整数队列]()
-     - [递归全排列]()
+     - [一些递归实现]()
      - more
+ - Program Language Part A
+    - Emacs
+    - ML
  
 ## Notice
  - spark na.fill 当接收Map作为参数时，Map的value类型只能为Int, Long, Float, Double, String, Boolean.
  - [Unable to find encoder for type stored in a Dataset. Primitive types (Int, String, etc) and Product types (case classes) are supported by importing spark.implicits._ Support for serializing other types will be added in future releases.](https://forums.databricks.com/questions/13772/apache-spark-210-question-in-spark-sql.html)
- - case class 使用时遇到的问题，放在方法作用域外面，否则容易出现奇奇怪怪的错误
+ - case class 使用时遇到的问题，放在main方法作用域外面，否则容易出现奇奇怪怪的错误
 
 ## 资料
  - [极客学院](http://wiki.jikexueyuan.com/list/scala/)
@@ -66,7 +69,7 @@
  - [Play Framework](https://doron.gitbooks.io/play-doc-zh/2.4/gettingStarted/06_Play_Tutorials.html)
  - [过往记忆的大数据](https://wemp.app/accounts/9228fadf-eedf-468f-b68a-8c2f69fd1f13)
  
-## 课程(need money)
+## 课程
  - [programming-languages](https://www.coursera.org/learn/programming-languages)
  - [Scala 函数式程序设计原理](https://www.coursera.org/learn/progfun1)
  
@@ -86,6 +89,7 @@
  - [Scala 隐式转换implicit详解](https://tryanswer.github.io/2018/05/24/scala-implicit/)
  - [扩展Spark Catalyst，打造自定义的Spark SQL引擎](https://zhuanlan.zhihu.com/p/50493032)
  - [scala 下划线解析报错： missing parameter type for expanded function](https://www.iteye.com/blog/zhouchaofei2010-2260107)
+ - [深入浅出Spark的Checkpoint机制](https://www.jianshu.com/p/a75d0439c2f9)
  
 ## Spark Learning
  - [Spark](https://github.com/apache/spark)

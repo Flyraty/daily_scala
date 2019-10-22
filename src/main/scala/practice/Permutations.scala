@@ -1,4 +1,4 @@
-/*
+/**
  * scala 实现字符串的全排列,
  */
 package practice
@@ -17,6 +17,9 @@ object Permutations {
   var i = 1
 
   def grad(a:Int, b:Int):Int = {
+    /**
+     * 更相减损求最大公约数
+     */
     val adjust:Int => Boolean = n => n % 2 == 0
     val ge:Int => Int => Int = n => m => if (n>m) n else m
     val le:Int => Int => Int = n => m => if (n>m) m else n
