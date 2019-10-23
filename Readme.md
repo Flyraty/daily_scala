@@ -37,8 +37,9 @@
      - [Basic Aggregate](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/basic_aggregate.scala)
      - [transform 高阶函数](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/transform.scala)
      - [Window Aggregate](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/window_aggregate.scala)
-     - Build-In Function
-     - Pivot
+     - [Collection Functions](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/collection_func.scala)
+     - [Date and Time Functions](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/datetime_func.scala)
+     - [Pivot](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/basic_aggregate.scala)
      - cube/rollup/groupings_set
      - UDF
      - UDAF
@@ -58,7 +59,8 @@
 ## Notice
  - spark na.fill 当接收Map作为参数时，Map的value类型只能为Int, Long, Float, Double, String, Boolean.
  - [Unable to find encoder for type stored in a Dataset. Primitive types (Int, String, etc) and Product types (case classes) are supported by importing spark.implicits._ Support for serializing other types will be added in future releases.](https://forums.databricks.com/questions/13772/apache-spark-210-question-in-spark-sql.html)
- - case class 使用时遇到的问题，放在main方法作用域外面，否则容易出现奇奇怪怪的错误
+ - case class 使用时遇到的问题，放在main方法作用域外面，否则容易出现奇奇怪怪的错
+ - [What does setMaster `local[*]` mean in spark?](https://stackoverflow.com/questions/32356143/what-does-setmaster-local-mean-in-spark)
 
 ## 资料
  - [极客学院](http://wiki.jikexueyuan.com/list/scala/)

@@ -25,6 +25,7 @@ object basic_aggregate {
       Token("bbb", 200, 0.31),
       Token("bbb", 300, 0.42)
     )
+
     val tokensDF = tokens.toDF()
     tokensDF.show()
 

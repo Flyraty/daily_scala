@@ -25,6 +25,8 @@ object actions {
 
     newSpark.catalog.tableExists("foo") // false
 
+    println(newSpark.sparkContext == spark.sparkContext) // true
+
     /*
      * checkPoint
      */
