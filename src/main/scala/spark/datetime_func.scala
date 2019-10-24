@@ -71,13 +71,13 @@ object datetime_func {
       .select("window.start", "window.end", "level_sum")
       .show()
 
-
     /*
      * to_date
      * to_timestamp
      */
     Seq(("2019-01-01")).toDF("time").withColumn("to_date", to_date($"time")).show()
     Seq(("2019-01-01")).toDF("time").withColumn("to_timestamp", to_timestamp($"time", "yyyy-mm-dd")).show()
+
 
   }
 

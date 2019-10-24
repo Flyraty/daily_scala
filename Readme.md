@@ -39,10 +39,11 @@
      - [Window Aggregate](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/window_aggregate.scala)
      - [Collection Functions](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/collection_func.scala)
      - [Date and Time Functions](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/datetime_func.scala)
+     - [Regular Functions](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/regular_func.scala)
+     - [UDF](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/UDF.scala)
+     - [UDAF,Aggregator](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/UDAF.scala)
      - [Pivot](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/basic_aggregate.scala)
      - cube/rollup/groupings_set
-     - UDF
-     - UDAF
      - Execute Plan
      - CheckPoint Cache Persist
      - Configure

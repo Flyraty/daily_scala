@@ -1,6 +1,8 @@
 /*
- * Spark Schema
- * 展示数据的结构
+ * Spark Schema 展示数据的结构
+ * StructType
+ * StructField
+ * DataType
  */
 package spark
 
@@ -72,12 +74,14 @@ object schema {
       Category("other.mobilelive", "手机直播", "O", "Mobile Live"),
       Category("talk.idx", "脱口秀", "E", "Talk Show"))
     val a = category.toDS()
+    val df1 = category.toDF()
     var b = List[Category]()
     for (c <- a.collect()){ b = c::b}
 
     val categoryConvertMap = b.map(t => t.cat1 -> t.cat2).toMap
-    print(categoryConvertMap.getOrElse("ccc", "啊啊啊啊啊"))
+    println(categoryConvertMap.getOrElse("ccc", "啊啊啊啊啊"))
 
+//    df1.map(t => t(1) -> t(2))
 
   }
 

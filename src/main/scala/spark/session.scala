@@ -14,7 +14,7 @@ object session {
     SparkSession.builder
       .appName("My Spark Application")
       .master("local[4]")
-      .config("spark.mongodb.input.uri", "mongodb://127.0.0.1:27017/fangtianxia")
+      .config("spark.mongodb.input.uri", "mongodb://127.0.0.1:27017/test")
       .config("spark.mongodb.input.collection", "UsedHouseItem_2019_41")
       .config("spark.mongodb.output.uri", "mongodb://127.0.0.1:27017/spark")
       .config("spark.mongodb.output.collection", "used_city")
