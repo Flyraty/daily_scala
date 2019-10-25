@@ -1,15 +1,18 @@
 /**
- * Spark 常见转换算子
- * Untyped transformations are part of the Dataset API for transforming a Dataset to a DataFrame, a Column, a RelationalGroupedDataset, a DataFrameNaFunctions or a DataFrameStatFunctions (and hence untyped).
- */
+  * Spark 常见转换算子
+  * Untyped transformations are part of the Dataset API for transforming a Dataset to a DataFrame, a Column, a RelationalGroupedDataset, a DataFrameNaFunctions or a DataFrameStatFunctions (and hence untyped).
+  */
 package spark
+
 import org.apache.spark.sql.SparkSession
-import typed_transformations.{summer, spring, activity}
 import org.apache.spark.sql.functions._
+import spark.typed_transformations.{activity, spring, summer}
 
 object untyped_transformations {
-  val spark:SparkSession = SparkSession.builder.master("local[4]").getOrCreate()
+  val spark: SparkSession = SparkSession.builder.master("local[4]").getOrCreate()
+
   import spark.implicits._
+
   def main(args: Array[String]): Unit = {
 
     /*
@@ -40,7 +43,7 @@ object untyped_transformations {
      * 城市 年龄对用户vip 等级和浏览数量的影响
      */
     val columns = Seq("name", "age", "city", "vip_level", "view_count")
-    val users  = Seq(
+    val users = Seq(
       ("Tom", 10, "北京", 0, 111),
       ("Jack", 20, "上海", 1, 3000),
       ("David", 23, "北京", 3, 4000),
@@ -62,6 +65,27 @@ object untyped_transformations {
       .sum("view_count").alias("sum_view")
       .show()
 
+    val sales = Seq(
+      ("Warsaw", 2016, 100),
+      ("Warsaw", 2017, 200),
+      ("Boston", 2015, 50),
+      ("Boston", 2016, 150),
+      ("Toronto", 2017, 50)
+    ).toDF("city", "year", "amount")
+    sales.createOrReplaceTempView("sales")
+
+    val q = spark.sql(
+      """
+      SELECT city, year, sum(amount) as amount
+      FROM sales
+      GROUP BY city, year
+      GROUPING SETS ((city, year), (city), ())
+      ORDER BY city DESC NULLS LAST, year ASC NULLS LAST
+    """)
+
+    q.show()
+
+
     /*
      * drop  join
      */
@@ -79,7 +103,7 @@ object untyped_transformations {
      * withColumn, withColumnRenamed
      * 重命名 添加新列
      */
-    summer.withColumn("id", $"id"+1).show()
+    summer.withColumn("id", $"id" + 1).show()
     summer.withColumnRenamed("id", "ID").show()
 
     /*

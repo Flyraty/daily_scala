@@ -43,7 +43,7 @@
      - [UDF](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/UDF.scala)
      - [UDAF,Aggregator](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/UDAF.scala)
      - [Pivot](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/basic_aggregate.scala)
-     - cube/rollup/groupings_set
+     - [cube/rollup/groupings_set](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/untyped_transformations.scala)
      - Execute Plan
      - CheckPoint Cache Persist
      - Configure
