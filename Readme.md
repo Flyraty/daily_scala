@@ -44,16 +44,16 @@
      - [UDAF,Aggregator](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/UDAF.scala)
      - [Pivot](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/basic_aggregate.scala)
      - [cube/rollup/groupings_set](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/untyped_transformations.scala)
+     - [CheckPoint Cache Persist](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/caching.scala)
+     - [Configure](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/configure.scala)
      - Execute Plan
-     - CheckPoint Cache Persist
-     - Configure
  - Practice
      - [Rational 有理数类]()
      - [Element 二维图形元素类]()
      - [IntQueue 简单的整数队列]()
      - [一些递归实现]()
      - more
- - Program Language Part A
+ - Program Language Part A 
     - Emacs
     - ML
  

@@ -36,7 +36,6 @@ object pattern {
 
     val lists = List(1, 2, 3) :: List.empty :: List(5, 3) :: Nil
 
-    // TODO 没搞懂
     for {
       list@head :: _ <- lists
     } yield lists.size

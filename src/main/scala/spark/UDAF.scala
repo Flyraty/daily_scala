@@ -1,10 +1,18 @@
 /*
  * User-Defined Aggregate Functions
  * Aggregator
+ * Spark自定义聚合函数时，需要实现UserDefinedAggregateFunction中8个方法：
+ * 1. inputSchema：输入的数据类型
+ * 2. bufferSchema：中间聚合处理时，需要处理的数据类型
+ * 3. dataType：函数的返回类型
+ * 4. deterministic：同样的输入是否每次对应同样的输出
+ * 5. initialize：为每个分组的数据初始化
+ * 6. update：每个分组，有新的值进来时，如何进行分组的聚合计算
+ * 7. merge：由于Spark是分布式的，所以一个分组的数据，可能会在不同的节点上进行局部聚合，就是update，但是最后一个分组，在各节点上的聚合值，要进行Merge，也就是合并
+ * 8. evaluate：一个分组的聚合值，如何通过中间的聚合值，
  */
 package spark
 import org.apache.spark.sql.{Row, SparkSession}
-import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.expressions.{MutableAggregationBuffer, UserDefinedAggregateFunction, Aggregator}
 import org.apache.spark.sql.{Encoders, Encoder}
@@ -82,7 +90,10 @@ class MyMaxUDAF extends UserDefinedAggregateFunction {
   override def initialize(buffer: MutableAggregationBuffer): Unit = buffer(0) = 0L
 
   override def update(buffer: MutableAggregationBuffer, input: Row): Unit = {
-    buffer(0) = input.getLong(0)
+
+    val temp = buffer.getLong(0)
+    val rowValue = input.getLong(0)
+    buffer(0) = if (temp > rowValue) temp else rowValue
   }
 
   override def merge(buffer: MutableAggregationBuffer, row: Row): Unit = {
@@ -153,15 +164,15 @@ object UDAF {
       Employee("Tos", 1652)
     )
 
-    employee.toDS().select(myAveragor.toColumn.name("average_salary")).show()
+    employee.toDS().select(myAveragor.toColumn.name("average_salary")).show() // 因为这里是Dataset[Employee]类型数据做聚合,所以toDS
 
     val df = Seq(("Michael", 3000), ("Andy", 4500), ("Justin", 3500), ("Berta", 4200)).toDF("name","salary")
 
-    df.agg(myMax($"salary"))
+    df.repartition(1).agg(myMax($"salary"))
       .show()
 
 
-    df.selectExpr("myMax(salary)").show()
+    df.repartition(1).selectExpr("myMax(salary)").show()
 
     spark
       .range(start = 0, end = 4, step = 1, numPartitions = 2)
