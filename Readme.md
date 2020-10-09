@@ -1,6 +1,6 @@
-# Learning Scala
+## Learning Scala
 
-## 目录
+### 目录
  - Scala
      - [循环控制](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/cycle_control.scala)
      - [类层次关系](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/scala/class_level.scala)
@@ -47,6 +47,7 @@
      - [CheckPoint Cache Persist](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/caching.scala)
      - [Configure](https://github.com/Flyraty/daily_scala/blob/master/src/main/scala/spark/configure.scala)
      - Execute Plan
+ - Spark Structured Streaming
  - Practice
      - [Rational 有理数类]()
      - [Element 二维图形元素类]()
@@ -57,13 +58,13 @@
     - Emacs
     - ML
  
-## Notice
+### Notice
  - spark na.fill 当接收Map作为参数时，Map的value类型只能为Int, Long, Float, Double, String, Boolean.
  - [Unable to find encoder for type stored in a Dataset. Primitive types (Int, String, etc) and Product types (case classes) are supported by importing spark.implicits._ Support for serializing other types will be added in future releases.](https://forums.databricks.com/questions/13772/apache-spark-210-question-in-spark-sql.html)
  - case class 使用时遇到的问题，放在main方法作用域外面，否则容易出现奇奇怪怪的错
  - [What does setMaster `local[*]` mean in spark?](https://stackoverflow.com/questions/32356143/what-does-setmaster-local-mean-in-spark)
 
-## 资料
+### 资料
  - [极客学院](http://wiki.jikexueyuan.com/list/scala/)
  - [Scala Doc](https://docs.scala-lang.org)
  - [Some Scala Blog Geeksforgeeks](https://www.geeksforgeeks.org/scala-functions-call-by-name/)
@@ -72,11 +73,11 @@
  - [Play Framework](https://doron.gitbooks.io/play-doc-zh/2.4/gettingStarted/06_Play_Tutorials.html)
  - [过往记忆的大数据](https://wemp.app/accounts/9228fadf-eedf-468f-b68a-8c2f69fd1f13)
  
-## 课程
+### 课程
  - [programming-languages](https://www.coursera.org/learn/programming-languages)
  - [Scala 函数式程序设计原理](https://www.coursera.org/learn/progfun1)
  
-## Blog
+### Blog
  - [Scala 一些特殊符号](https://notes.mengxin.science/2018/09/07/scala-special-symbol-usage/)
  - [transfrom](https://medium.com/@mrpowers/schema-independent-dataframe-transformations-d6b36e12dca6)
  - [Kudu：一个融合低延迟写入和高性能分析的存储系统](https://zhuanlan.zhihu.com/p/26798353)
@@ -94,7 +95,7 @@
  - [scala 下划线解析报错： missing parameter type for expanded function](https://www.iteye.com/blog/zhouchaofei2010-2260107)
  - [深入浅出Spark的Checkpoint机制](https://www.jianshu.com/p/a75d0439c2f9)
  
-## Spark Learning
+### Spark Learning
  - [Spark](https://github.com/apache/spark)
  - [简单了解](https://juejin.im/post/5a73c8386fb9a0635e3cafaa)
  - [Spark SQL](https://jaceklaskowski.gitbooks.io/mastering-spark-sql)
@@ -102,6 +103,7 @@
    - FILE-BASED DATA SOURCES,  KAFKA DATA SOURCE, AVRO DATA SOURCE, HIVE DATA SOURCE
    - DEVELOPING SPARK SQL APPLICATIONS 
  - Spark UI
+ - [Spark Structured Streaming](https://jaceklaskowski.gitbooks.io/spark-structured-streaming/)
  
  
  
