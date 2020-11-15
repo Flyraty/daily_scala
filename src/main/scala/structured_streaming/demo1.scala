@@ -62,21 +62,21 @@ object demo1 {
     }
     val signalsByDevice = signals.groupByKey(deviceId)
 
-    import org.apache.spark.sql.streaming.{GroupStateTimeout, OutputMode}
-    val signalCounter = signalsByDevice.flatMapGroupsWithState(
-      outputMode = OutputMode.Append,
-      timeoutConf = GroupStateTimeout.NoTimeout)(countValuesPerDevice)
-
-    import org.apache.spark.sql.streaming.{OutputMode, Trigger}
-    import scala.concurrent.duration._
-    val sq = signalCounter.
-      writeStream.
-      format("console").
-      option("truncate", false).
-      trigger(Trigger.ProcessingTime(10.seconds)).
-      outputMode(OutputMode.Append).
-      start
-
-
+//    import org.apache.spark.sql.streaming.{GroupStateTimeout, OutputMode}
+//    val signalCounter = signalsByDevice.flatMapGroupsWithState(
+//      outputMode = OutputMode.Append,
+//      timeoutConf = GroupStateTimeout.NoTimeout)(countValuesPerDevice)
+//
+//    import org.apache.spark.sql.streaming.{OutputMode, Trigger}
+//    import scala.concurrent.duration._
+//    val sq = signalCounter.
+//      writeStream.
+//      format("console").
+//      option("truncate", false).
+//      trigger(Trigger.ProcessingTime(10.seconds)).
+//      outputMode(OutputMode.Append).
+//      start
+//
+//
   }
 }
